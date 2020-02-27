@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Customer Home page</title>
+</head>
+<body>
+	<h1>Welcome to Computer Shop</h1>
+
+<h3>want to buy anything</h3>
+	
+	<a href="/product/casing">Casing</a> |
+	<a href="/product/storage">Storage</a> |
+	<a href="/product/monitor">Monitor</a> |
+	<a href="/product/laptop">laptop</a> |
+	<br>
+	<h3>our popular product</h3> <br>
+
+	<table border="0">
+
+	<% for(var i=0; i< 4; i++){ %>
+		<tr>
+			
+			<tr>
+			
+			
+			<td><%= user[i].name %></td></tr>
+			<tr>
+				<td>price:</td>
+			<td><%= user[i].price %></td></tr>
+			<tr>
+				<td>Brand</td>
+				<td><%= user[i].cname %></td></tr>
+			<tr><td><%= user[i].description %></td>
+
+		
+			<td>
+				<a href="/user/cart/<%= user[i].id %>">Add to cart  </a> | 
+				
+			</td>
+		</tr>
+		
+			
+	<% } %>
+	</table>
+
+	<a href="/logout">logout</a>
+
+</body>
+</html>
